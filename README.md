@@ -11,7 +11,7 @@ Pour ce projet nous utilisons Spring Boot/ReactJS avec Docker
 Vous devez posséder docker, il faut ensuite ce placer dans le dossier projet et executer le Dockerfile comme suit:
 
 ```
-docker built -t springio .
+docker build -t springio .
 ```
 
 ### Installing
