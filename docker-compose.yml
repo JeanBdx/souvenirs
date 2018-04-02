@@ -1,24 +1,19 @@
-version : '3.6'
+version: '3'
 services:
-  back:
-    build : springio/souvenirs
-    ports :
-      - "8080:8080"
+  web:
+   image: springio/souvenirs
+   ports:
+    - "8080:8080"
    environment:
-     - "SPRING_PROFILES_ACTIVE=dev"
-
+    - "SPRING_PROFILES_ACTIVE=dev"
+   links:
+    - db
   front:
-    build : bayesimpact/react-base:latest
+    image : bayesimpact/react-base
     ports :
       - "3000:3000"
   db:
     image: postgres
-    restart: always
     environment:
-      POSTGRES_PASSWORD: example
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
+      POSTGRES_USER: miage
+      POSTGRES_PASSWORD: bordeaux
