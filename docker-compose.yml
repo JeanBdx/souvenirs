@@ -9,9 +9,12 @@ services:
    links:
     - db
   front:
+    build: ./client
     image : bayesimpact/react-base
     ports :
       - "3000:3000"
+    volumes:
+      - ./client:/usr/app
   db:
     image: postgres
     environment:
