@@ -30,4 +30,4 @@ docker-compose up
 
 ## Authors
 
-* **Jean Arhancetebehere **
+* Jean Arhancetebehere 
