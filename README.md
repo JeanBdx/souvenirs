@@ -8,7 +8,7 @@ Pour ce projet nous utilisons Spring Boot/ReactJS avec Docker
 
 ### Prerequisites
 
-Vous devez posséder docker, il faut ensuite ce placer dans le dossier projet et executer le Dockerfile comme suit:
+Vous devez posséder docker, il faut ensuite ce placer dans le dossier souvenirs et executer le Dockerfile comme suit:
 
 ```
 docker build -t springio .
@@ -16,12 +16,19 @@ docker build -t springio .
 
 ### Installing
 
-Après avoir construit l'image, il faut lancer le docker-compose.yml
+Après avoir construit l'image, on lance maven avec cette commande :
 
+```
+mvnw clean install dockerfile:build 
+
+```
+
+
+
+On lance ensuite nos containeurs :
 ```
 docker-compose up
 ```
-
 ## Built With
 
 * [Docker](https://www.docker.com/) - Docker plateform
