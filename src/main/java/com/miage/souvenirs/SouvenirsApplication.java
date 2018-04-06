@@ -13,7 +13,7 @@ public class SouvenirsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SouvenirsApplication.class, args);
-    }
+    }	
 
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
